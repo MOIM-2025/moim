@@ -1,4 +1,4 @@
-+ .turbo
+.turbo
 .npmrc
 .env
 node_modules
