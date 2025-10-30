@@ -10,6 +10,27 @@
     "dev": {
       "persistent": true,
       "cache": false
+    },
+    "android": {
+      "persistent": true,
+      "cache": false
+    },
+    "ios": {
+      "persistent": true,
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "test:watch": {
+      "persistent": true,
+      "cache": false
+    },
+    "clean": {
+      "cache": false
     }
   }
 }
