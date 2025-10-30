@@ -1,0 +1,3 @@
+{
+  "extends": "@moim-package/ts-config/backend.json"
+}

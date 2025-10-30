@@ -1,0 +1,29 @@
+{
+	"private": true,
+	  "workspaces": [
+		"apps/*",
+		"packages/*"
+  	],
+	"engines": {
+    	"node": "22.12.0"
+  	},
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"dev:backend": "turbo run dev --filter=backend",
+		"dev:mobile": "turbo run dev --filter=mobile",
+		"build:backend": "turbo run build --filter=backend",
+		"start:backend": "turbo run start --filter=backend",
+		"start:backend:prod": "turbo run start:prod --filter=backend",
+		"android": "turbo run android --filter=mobile",
+		"ios": "turbo run ios --filter=mobile",
+		"lint": "turbo run lint",
+		"test": "turbo run test"
+	},
+	"packageManager": "pnpm@10.0.0",
+	"devDependencies": {
+		"turbo": "^2.5.8",
+		"jest": "30.2.0",
+		"@types/jest": "30.0.0"
+	}
+}

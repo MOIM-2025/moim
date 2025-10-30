@@ -1,0 +1,48 @@
+{
+  "name": "mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "ios:device": "react-native run-ios --device",
+    "android:release": "react-native run-android --variant=release",
+    "ios:release": "react-native run-ios --configuration Release",
+    "build:android": "cd android && ./gradlew assembleRelease",
+    "build:ios": "cd ios && xcodebuild -workspace mobile.xcworkspace -scheme mobile -configuration Release archive",
+    "start": "react-native start",
+    "clean": "react-native clean-project-auto",
+    "clean:android": "cd android && ./gradlew clean",
+    "clean:ios": "cd ios && xcodebuild clean",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-native": "0.82.1",
+    "@react-native/new-app-screen": "0.82.1",
+    "react-native-safe-area-context": "^5.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "20.0.0",
+    "@react-native-community/cli-platform-android": "20.0.0",
+    "@react-native-community/cli-platform-ios": "20.0.0",
+    "@react-native/babel-preset": "0.82.1",
+    "@react-native/metro-config": "0.82.1",
+    "@types/react": "^19.1.1",
+    "@types/react-test-renderer": "^19.1.0",
+    "react-test-renderer": "19.1.1",
+    "@moim-package/ts-config": "0.1.2",
+    "@moim-package/prettier-config": "0.1.2",
+    "@moim-package/eslint-config": "0.1.2",
+    "@moim-package/ui": "0.1.2"
+  },
+  "engines": {
+    "node": "22.12.0"
+  }
+}

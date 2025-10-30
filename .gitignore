@@ -1,0 +1,11 @@
++ .turbo
+.npmrc
+.env
+node_modules
+dist
+build
+coverage
+*.log
+.DS_Store
+.vscode
+.idea

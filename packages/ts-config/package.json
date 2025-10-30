@@ -1,0 +1,17 @@
+{
+  "name": "@moim-package/ts-config",
+  "version": "0.1.5",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./base.json": "./base.json",
+    "./react-native.json": "./react-native.json",
+    "./backend.json": "./backend.json"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@react-native/typescript-config": "0.82.1"
+  }
+}
