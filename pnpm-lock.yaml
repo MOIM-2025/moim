@@ -11,6 +11,9 @@ importers:
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
+      zod:
+        specifier: ^4.1.12
+        version: 4.1.12
     devDependencies:
       '@types/jest':
         specifier: 30.0.0
