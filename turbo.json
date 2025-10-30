@@ -1,33 +1,40 @@
 {
   "$schema": "https://turborepo.com/schema.json",
+  "globalEnv": ["NODE_ENV", "ENV_FILE"],
   "tasks": {
     "build": {
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "env": ["NODE_ENV"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
     },
     "dev": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["NODE_ENV", "ENV_FILE"]
     },
     "android": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["ENV_FILE"]
     },
     "ios": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["ENV_FILE"]
     },
     "lint": {
       "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "env": ["NODE_ENV", "ENV_FILE"]
     },
     "test:watch": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["NODE_ENV", "ENV_FILE"]
     },
     "clean": {
       "cache": false

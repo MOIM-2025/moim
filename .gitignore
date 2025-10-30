@@ -1,6 +1,15 @@
 .turbo
 .npmrc
+
+# Environment variables
 .env
+
+!.env.local
+
+# Keep example files
+.env.dev
+.env.prod
+
 node_modules
 dist
 build

@@ -3,21 +3,21 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "ios:device": "react-native run-ios --device",
-    "android:release": "react-native run-android --variant=release",
-    "ios:release": "react-native run-ios --configuration Release",
-    "build:android": "cd android && ./gradlew assembleRelease",
-    "build:ios": "cd ios && xcodebuild -workspace mobile.xcworkspace -scheme mobile -configuration Release archive",
+    "dev": "cross-env ENV_FILE=.env.dev react-native start",
+    "android": "cross-env ENV_FILE=.env.dev react-native run-android",
+    "ios": "cross-env ENV_FILE=.env.dev react-native run-ios",
+    "ios:device": "cross-env ENV_FILE=.env.dev react-native run-ios --device",
+    "android:release": "cross-env ENV_FILE=.env.prod react-native run-android --variant=release",
+    "ios:release": "cross-env ENV_FILE=.env.prod react-native run-ios --configuration Release",
+    "build:android": "cross-env ENV_FILE=.env.prod cd android && ./gradlew assembleRelease",
+    "build:ios": "cross-env ENV_FILE=.env.prod cd ios && xcodebuild -workspace mobile.xcworkspace -scheme mobile -configuration Release archive",
     "start": "react-native start",
     "clean": "react-native clean-project-auto",
     "clean:android": "cd android && ./gradlew clean",
     "clean:ios": "cd ios && xcodebuild clean",
     "lint": "eslint .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "cross-env ENV_FILE=.env.dev jest",
+    "test:watch": "cross-env ENV_FILE=.env.dev jest --watch"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.82.1",
@@ -42,6 +42,7 @@
     "@react-native/metro-config": "0.82.1",
     "@types/react": "^19.1.1",
     "@types/react-test-renderer": "^19.1.0",
+    "react-native-dotenv": "^3.4.11",
     "react-test-renderer": "19.1.1"
   },
   "engines": {
